@@ -19,6 +19,6 @@ ReactDOM.render(
     title={post.title}
     author={post.author}
     body={post.body}
-    comment={post.comments[0]} />,
+    comments={post.comments} />,
   document.getElementById('root')
 );

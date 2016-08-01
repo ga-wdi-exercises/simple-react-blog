@@ -17,6 +17,11 @@ class Post extends Component {
     })
   }
   render() {
+    let comments = this.props.comments.map( (comment, index) => (
+      // each comment needs a key attribute to keep track of data passed as props
+      // key should be a unique identifier for each child component
+      <Comment body={comment} key={index} />
+    ))
     return (
       <div>
         <h1>{this.props.title}</h1>
@@ -26,7 +31,7 @@ class Post extends Component {
           <button onClick={(e) => this.handleClick(e)}>Edit Body</button>
         </div>
         <h3>Comments:</h3>
-        <Comment body={this.props.comment} />
+        {comments}
       </div>
     );
   }
