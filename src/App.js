@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+
+class Post extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div>
+        <h1>{this.props.title}</h1>
+        <p>By {this.props.author}</p>
+        <div>
+          <p>{this.props.body}</p>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h3>Comments:</h3>
+        <p>{this.props.comments[0]}</p>
       </div>
     );
   }
 }
 
-export default App;
+export default Post;
