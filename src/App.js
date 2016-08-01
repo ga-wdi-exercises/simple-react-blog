@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Comment from './Comment.js'
 import './App.css';
 
 
@@ -12,7 +13,7 @@ class Post extends Component {
           <p>{this.props.body}</p>
         </div>
         <h3>Comments:</h3>
-        <p>{this.props.comments[0]}</p>
+        <Comment body={this.props.comment} />
       </div>
     );
   }
